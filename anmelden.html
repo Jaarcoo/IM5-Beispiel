@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registrierungsformular</title>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <h2>Anmelden</h2>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="I AM A TEXTFIELD">
+        <div id="nameValidation" style="color: red;"></div>
+      </div>
+      <div class="form-group">
+        <label for="birthdate">Geburtsdatum</label>
+        <input type="text" id="birthdate" placeholder="TT.MM.JJJJ" pattern="\d{2}\.\d{2}\.\d{4}">
+        <div id="birthdateValidation" style="color: red;"></div>
+      </div>
+      <button type="button" id="submitBtn">Let's Go!</button>
+</div>
+<script src="js/anmelden.js"></script>
+</body>
+</html>
