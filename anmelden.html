@@ -3,23 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Registrierungsformular</title>
+<title>Anmelden</title>
+
 <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Quicksand&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <h2>Anmelden</h2>
-    <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="I AM A TEXTFIELD">
-        <div id="nameValidation" style="color: red;"></div>
-      </div>
+    <h1>Anmelden</h1>
+
+    <div id="anmeldeFormular">
       <div class="form-group">
-        <label for="birthdate">Geburtsdatum</label>
-        <input type="text" id="birthdate" placeholder="TT.MM.JJJJ" pattern="\d{2}\.\d{2}\.\d{4}">
-        <div id="birthdateValidation" style="color: red;"></div>
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Gib hier deinen Namen ein">
+          <div id="nameValidation" style="color: red;"></div>
+        </div>
+        <div class="form-group">
+          <label for="birthdate">Geburtsdatum</label>
+          <input type="text" id="birthdate" placeholder="TT.MM.JJJJ" pattern="\d{2}\.\d{2}\.\d{4}">
+          <div id="birthdateValidation" style="color: red;"></div>
+        </div>
+        <button type="button" id="submitBtn">Let's Go!</button>
       </div>
-      <button type="button" id="submitBtn">Let's Go!</button>
-</div>
+    </div>
 <script src="js/anmelden.js"></script>
 </body>
 </html>

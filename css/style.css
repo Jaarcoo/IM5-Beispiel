@@ -1,35 +1,117 @@
+/* Styling für Anmelden  */
+
+
+#anmeldeFormular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ /* height: 50vh;  Stellt sicher, dass der Container die volle Höhe der Ansicht einnimmt */
+  margin-bottom: 20px;
+}
+ 
+.form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#submitBtn {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  background-color: #2d5e92;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 20px 20px 20px 20px;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+
+#submitBtn:hover {
+  background-color: #60dae6;
+}
+
+label {
+  justify-content: center;
+  display: flex;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  color: #193162;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+/*Styling für Lebenskalender */
+
 .title-container {
   text-align: center;
   margin: 20px 0;
 }
 
+.title-container h1 {
+  font-size: 55px;
+  margin-bottom: 20px;
+  font-family: 'Indie Flower', cursive;
+}
+
+
 .calendar {
-    display: grid;
-    grid-template-columns: repeat(13, 1fr);
-    grid-gap: 10px;
-    max-width: 800px;
-    margin: 0 auto;
-    }
+display: grid;
+grid-template-columns: repeat(13, 1fr);
+grid-gap: 10px;
+max-width: auto;
+margin: 0 auto;
+}
+
 
 .week {
-    width: auto;
-    height: auto;
-    background-color: #eee;
-    border: 1px solid #ccc;
-    cursor: pointer;
+width: 1.5vw;
+height: 1vw;
+background-color: #eee;
+border: 1px solid #ccc;
+cursor: pointer;
 }
 
-.block {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    grid-gap: 1px;
-    width:80;
-    height: 50px;
-    background-color: #eee;
-    border: 1px solid #ccc;
-    cursor: pointer;
+.week:hover {
+  background-color: #60dae6; /* Ersetze #f0e68c mit der Farbe deiner Wahl */
 }
+
+
+.block {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-gap: 1px;
+  height: auto;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  }
+
+
 
 .week.marked {
     background-color: #3498db;
@@ -37,76 +119,113 @@
 }
 
 
+ /* Styling für Wochen-Reflexion  */
 
 
- /* Styling für HTML-File woche.html  */
 
+#ButtonZumTag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
 }
-
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    background-color: #e0e0e0;
-    margin-bottom: 10px;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-}
+  /*list-style-type: none;
+  padding: 0;
+  background-color: #2d5e92;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+} */
 
 input[type="text"] {
-    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    width: 50vw;
     padding: 10px;
-    margin-top: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #aaa;
     box-sizing: border-box;
 }
 
 
+#FragenWochenReflexion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -80px;
+  height: 100vh; /* Stellt sicher, dass der Container die volle Höhe der Ansicht einnimmt */
+}
 
- /* Styling für HTML-File anmelden.html  */
+a button {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  color: white;
+  background-color: #2d5e92;
+  margin-bottom: 20px; /* oder ein beliebiger Wert für den Abstand zwischen den Buttons */
+  width: 50vw;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+}
 
- 
-  .form-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  .form-group {
+a button:hover {
+  background-color: #60dae6; /* Ersetze #f0e68c mit der Farbe deiner Wahl */
+}
+
+
+
+
+
+
+
+
+/* Styling für Tages-Reflexion */
+
+#FragenTagesReflexion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Stellt sicher, dass der Container die volle Höhe der Ansicht einnimmt */
     margin-bottom: 20px;
   }
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  input[type=text] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #0056b3;
+
+
+
+
+/* allgemeines Styling*/
+
+body {
+  background-color: #E8F8FE;
+}
+
+
+h1 {
+  font-size: 55px;
+  margin-bottom: 80px;
+  font-family: 'Indie Flower', cursive;
+  color: #0f234a;
+  text-align: center;
+}
+
+
+p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  color: #193162;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  max-width: 50vw;
+}
+
+h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  color: #193162;
+  text-align: center;
   }

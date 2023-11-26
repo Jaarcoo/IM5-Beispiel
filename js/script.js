@@ -17,6 +17,10 @@ for (let block = 1; block <= totalBlocks; block++) {
         const weekElement = document.createElement("div");
         weekElement.className = "week"; 
 
+        weekElement.addEventListener("click", function() {
+          window.location.href = 'http://127.0.0.1:5500/woche.html';
+      });
+
         block.appendChild(weekElement);
     }
     
@@ -31,4 +35,37 @@ for (let block = 1; block <= totalBlocks; block++) {
 
     }
     ;
+
+//Wochen in der Vergangenheit mit random Farben zuweisen
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Ersetze 'birthdateInput' mit der ID deines Geburtsdatum-Eingabefelds
+        const birthdateInput = document.getElementById('birthdate');
+        const submitBtn = document.getElementById('submitBtn');
+        
+        submitBtn.addEventListener('click', function() {
+          const birthdate = new Date(birthdateInput.value);
+          colorPastWeeks(birthdate);
+        });
+      });
+      
+      function colorPastWeeks(birthdate) {
+        const today = new Date();
+        const oneWeek = 1000 * 60 * 60 * 24 * 7;
+        const weeksLived = Math.floor((today - birthdate) / oneWeek);
+        const weeks = document.querySelectorAll('.week');
+      
+        for (let i = 0; i < weeksLived && i < weeks.length; i++) {
+          weeks[i].style.backgroundColor = getRandomColor();
+        }
+      }
+      
+      function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
     
