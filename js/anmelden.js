@@ -36,7 +36,7 @@
         // If both fields are valid, perform the redirect action
         if (validName && validDate) {
           // Redirect to your calendar HTML page
-          window.location.href = "http://127.0.0.1:5500/index.html";
+          window.location.href = "/lebensKalender.html";
         }
       }
 

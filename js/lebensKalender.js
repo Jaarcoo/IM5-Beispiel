@@ -18,7 +18,7 @@ for (let block = 1; block <= totalBlocks; block++) {
         weekElement.className = "week"; 
 
         weekElement.addEventListener("click", function() {
-          window.location.href = 'http://127.0.0.1:5500/woche.html';
+          window.location.href = '/wochenReflexion.html';
       });
 
         block.appendChild(weekElement);
