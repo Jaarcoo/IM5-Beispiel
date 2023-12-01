@@ -21,12 +21,11 @@
     <div id="anmeldeFormular">
       <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Gib hier deinen Namen ein">
+          <input type="text" id="name" placeholder="Gib hier deinen Namen ein" required>
           <div id="nameValidation" style="color: red;"></div>
-        </div>
-        <div class="form-group">
+        
           <label for="birthdate">Geburtsdatum</label>
-          <input type="text" id="birthdate" placeholder="TT.MM.JJJJ" pattern="\d{2}\.\d{2}\.\d{4}">
+          <input type="date" id="birthdate" placeholder="TT.MM.JJJJ" required>
           <div id="birthdateValidation" style="color: red;"></div>
         </div>
         <button type="button" id="submitBtn">Let's Go!</button>

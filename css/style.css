@@ -1,3 +1,37 @@
+/* allgemeines Styling*/
+
+body {
+  background-color: #E8F8FE;
+}
+
+
+h1 {
+  font-size: 55px;
+  margin-bottom: 80px;
+  font-family: 'Indie Flower', cursive;
+  color: #0f234a;
+  text-align: center;
+}
+
+
+p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  color: #193162;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  max-width: 50vw;
+}
+
+h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  color: #193162;
+  text-align: center;
+  }
+
+
+
 /* Styling für Anmelden  */
 
 
@@ -193,39 +227,4 @@ a button:hover {
     justify-content: center;
     height: 100vh; /* Stellt sicher, dass der Container die volle Höhe der Ansicht einnimmt */
     margin-bottom: 20px;
-  }
-
-
-
-
-/* allgemeines Styling*/
-
-body {
-  background-color: #E8F8FE;
-}
-
-
-h1 {
-  font-size: 55px;
-  margin-bottom: 80px;
-  font-family: 'Indie Flower', cursive;
-  color: #0f234a;
-  text-align: center;
-}
-
-
-p {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 25px;
-  color: #193162;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  max-width: 50vw;
-}
-
-h3 {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 25px;
-  color: #193162;
-  text-align: center;
   }
