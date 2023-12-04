@@ -201,8 +201,6 @@ cursor: pointer;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: -80px;
-  height: 100vh; /
 }
 
 
@@ -237,6 +235,38 @@ a button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; 
     margin-bottom: 20px;
   }
+
+
+
+
+
+
+
+/* --------------------------- Responsive for mobile --------------------------- */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px; 
+    margin-bottom: 20px;
+  }
+
+  p, h3, input[type="text"], label, input[type="date" i] {
+    font-size: 18px; 
+  }
+
+  p, input[type="text"], input[type="date" i] {
+    max-width: 90vw; 
+    width: 90vw; 
+  }
+
+  .form-container, .week, .block, a button {
+    max-width: 90vw; 
+  }
+
+  #submitBtn, a button {
+    padding: 10px; 
+  }
+
+}
