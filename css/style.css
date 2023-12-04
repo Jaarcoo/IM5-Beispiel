@@ -1,4 +1,4 @@
-/* allgemeines Styling*/
+/* --------------------------- allgemeines Styling ---------------------------*/
 
 body {
   background-color: #E8F8FE;
@@ -7,7 +7,7 @@ body {
 
 h1 {
   font-size: 55px;
-  margin-bottom: 80px;
+  margin-bottom: 45px;
   font-family: 'Indie Flower', cursive;
   color: #0f234a;
   text-align: center;
@@ -23,6 +23,7 @@ p {
   max-width: 50vw;
 }
 
+
 h3 {
   font-family: 'Quicksand', sans-serif;
   font-size: 25px;
@@ -31,19 +32,34 @@ h3 {
   }
 
 
+  input[type="text"] {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    width: 50vw;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    box-sizing: border-box;
+}
 
-/* Styling für Anmelden  */
 
+
+
+
+
+
+/* --------------------------- Styling für Anmelden ---------------------------  */
 
 #anmeldeFormular {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
- /* height: 50vh;  Stellt sicher, dass der Container die volle Höhe der Ansicht einnimmt */
   margin-bottom: 20px;
 }
  
+
 .form-container {
   max-width: 400px;
   margin: 50px auto;
@@ -51,21 +67,31 @@ h3 {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
+
 .form-group {
   margin-bottom: 20px;
 }
+
+
 label {
   display: block;
   margin-bottom: 5px;
 }
 
-input[type=text] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  text-align: center;
+
+input[type="date" i] {
+  font-family: 'Quicksand', sans-serif; 
+  font-size: 25px; 
+  width: 50vw; 
+  padding: 10px; 
+  margin-bottom: 10px; 
+  border-radius: 5px; 
+  border: 1px solid #aaa; 
+  box-sizing: border-box; 
+  margin: auto; 
 }
+
 
 #submitBtn {
   font-family: 'Quicksand', sans-serif;
@@ -79,9 +105,11 @@ input[type=text] {
   margin-top: 40px;
 }
 
+
 #submitBtn:hover {
   background-color: #60dae6;
 }
+
 
 label {
   justify-content: center;
@@ -98,12 +126,13 @@ label {
 
 
 
-/*Styling für Lebenskalender */
+/* --------------------------- Styling für Lebenskalender --------------------------- */
 
 .title-container {
   text-align: center;
   margin: 20px 0;
 }
+
 
 .title-container h1 {
   font-size: 55px;
@@ -124,13 +153,14 @@ margin: 0 auto;
 .week {
 width: 1.5vw;
 height: 1vw;
-background-color: #eee;
+background-color: #fbf5e9;
 border: 1px solid #ccc;
 cursor: pointer;
 }
 
+
 .week:hover {
-  background-color: #60dae6; /* Ersetze #f0e68c mit der Farbe deiner Wahl */
+  background-color: #60dae6;
 }
 
 
@@ -140,11 +170,10 @@ cursor: pointer;
   grid-template-rows: repeat(10, 1fr);
   grid-gap: 1px;
   height: auto;
-  background-color: #eee;
+  background-color: #fbf5e9;
   border: 1px solid #ccc;
   cursor: pointer;
   }
-
 
 
 .week.marked {
@@ -153,9 +182,9 @@ cursor: pointer;
 }
 
 
- /* Styling für Wochen-Reflexion  */
 
 
+ /* --------------------------- Styling für Wochen-Reflexion ---------------------------  */
 
 #ButtonZumTag {
   display: flex;
@@ -165,25 +194,6 @@ cursor: pointer;
   margin-bottom: 100px;
 
 }
-  /*list-style-type: none;
-  padding: 0;
-  background-color: #2d5e92;
-  margin-bottom: 10px;
-  padding: 10px;
-  text-align: center;
-  border-radius: 5px;
-} */
-
-input[type="text"] {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 25px;
-    width: 50vw;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #aaa;
-    box-sizing: border-box;
-}
 
 
 #FragenWochenReflexion {
@@ -192,23 +202,25 @@ input[type="text"] {
   align-items: center;
   justify-content: center;
   margin-top: -80px;
-  height: 100vh; /* Stellt sicher, dass der Container die volle Höhe der Ansicht einnimmt */
+  height: 100vh; /
 }
+
 
 a button {
   font-family: 'Quicksand', sans-serif;
   font-size: 25px;
   color: white;
   background-color: #2d5e92;
-  margin-bottom: 20px; /* oder ein beliebiger Wert für den Abstand zwischen den Buttons */
+  margin-bottom: 20px; 
   width: 50vw;
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 20px;
 }
 
+
 a button:hover {
-  background-color: #60dae6; /* Ersetze #f0e68c mit der Farbe deiner Wahl */
+  background-color: #60dae6; 
 }
 
 
@@ -218,13 +230,13 @@ a button:hover {
 
 
 
-/* Styling für Tages-Reflexion */
+/* --------------------------- Styling für Tages-Reflexion --------------------------- */
 
 #FragenTagesReflexion {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Stellt sicher, dass der Container die volle Höhe der Ansicht einnimmt */
+    height: 100vh; 
     margin-bottom: 20px;
   }

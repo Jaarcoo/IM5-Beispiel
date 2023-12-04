@@ -1,10 +1,12 @@
+
+
 function dateInputRestriction(event) {
-  // Erlaube nur Nummern und den Punkt
+  // Allow only numbers and the dot
   let char = String.fromCharCode(event.which);
   if (!(/[0-9.]/.test(char))) {
     event.preventDefault();
   }
-}
+};
 
 function redirectToCalendar() {
   let name = document.getElementById('name').value.trim();
@@ -17,7 +19,6 @@ function redirectToCalendar() {
   birthdateValidation.textContent = '';
 
   let validName = name !== '';
-  // let validDate = /^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[012])\.(19|20)\d\d$/.test(birthdate);
 
   // Validate name
   if (!validName) {
@@ -32,25 +33,24 @@ function redirectToCalendar() {
   // If both fields are valid, perform the redirect action
   if (validName && birthdate) {
     // Redirect to your calendar HTML page
-
     writeDateAndName(name, birthdate);
     window.location.href = "/lebensKalender.html";
   }
-}
+};
 
 function allowOnlyNumbersAndDots(event) {
-  // Erlaube nur Ziffern und den Punkt (ASCII Code: 46 für Punkt, 48-57 für Zahlen 0-9)
+  // Allow only digits and the dot (ASCII Code: 46 for dot, 48-57 for numbers 0-9)
   if ((event.which != 46 && event.which < 48) || event.which > 57) {
     event.preventDefault();
   }
 
-  // Erlaube nur einen Punkt zwischen den Zahlen
+  // Allow only one dot between the numbers
   var currentValue = event.target.value;
   if (event.which == 46 && (currentValue.match(/\./g) || []).length >= 2) {
     event.preventDefault();
   }
 
-  // Verhindere das Einfügen von nicht gültigen Zeichen
+  // Prevent the insertion of invalid characters
   if (event.which == 0 || event.which == 229) {
     setTimeout(function () {
       if (!/^\d{0,2}(\.\d{0,2}){0,2}$/.test(event.target.value)) {
@@ -58,7 +58,7 @@ function allowOnlyNumbersAndDots(event) {
       }
     }, 0);
   }
-}
+};
 
 document.addEventListener('DOMContentLoaded', function () {
   if (localStorage.getItem('userData')) {
@@ -77,14 +77,14 @@ function writeDateAndName(name, birthdate) {
   let newDate = Date.parse(birthdate);
   console.log(birthdate);
   
-  const weeksLived = Math.floor((today - newDate) / oneWeek);
-  console.log(weeksLived);
+  const weeksLivedAtFirstLogin = Math.floor((today - newDate) / oneWeek);
+  console.log(weeksLivedAtFirstLogin);
 
   // Create an object with the name and date
   var dataObject = {
     name: name,
     date: birthdate,
-    weeksLived: weeksLived
+    weeksLivedAtFirstLogin: weeksLivedAtFirstLogin
   };
 
   // Convert the object to a string
@@ -92,4 +92,4 @@ function writeDateAndName(name, birthdate) {
 
   // Store the stringified object in localStorage
   localStorage.setItem('userData', dataString);
-}
+};
